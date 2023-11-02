@@ -1,59 +1,61 @@
 import React from "react";
 
-function CasesTable({ tableName, cases }) {
-  return (
-    <div className="col-span-full xl:col-span-12 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
-      <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
-        <h2 className="font-semibold text-slate-800 dark:text-slate-100">
-          {tableName}
-        </h2>
-      </header>
-      <div className="p-3">
-        {/* Table */}
-        <div className="overflow-x-auto">
-          <table className="table-auto w-full dark:text-slate-300">
-            {/* Table header */}
-            <thead className="text-xs uppercase text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-700 dark:bg-opacity-50 rounded-sm">
-              <tr>
-                <th className="p-2">
-                  <div className="font-semibold text-left">Case Number</div>
-                </th>
-                <th className="p-2">
-                  <div className="font-semibold text-center">Date File</div>
-                </th>
-                <th className="p-2">
-                  <div className="font-semibold text-center">Case type</div>
-                </th>
-                <th className="p-2">
-                  <div className="font-semibold text-center">Advocate</div>
-                </th>
-                <th className="p-2">
-                  <div className="font-semibold text-center">
-                    Attorney Advocate
-                  </div>
-                </th>
-                <th className="p-2">
-                  <div className="font-semibold text-center">Defendant</div>
-                </th>
-                <th className="p-2">
-                  <div className="font-semibold text-center">Petitioner</div>
-                </th>
-                <th className="p-2">
-                  <div className="font-semibold text-center">Judge</div>
-                </th>
-                <th className="p-2">
-                  <div className="font-semibold text-center">Case Status</div>
-                </th>
-                <th className="p-2">
-                  <div className="font-semibold text-center">Case Report</div>
-                </th>
-              </tr>
-            </thead>
-            {/* Table body */}
+function CasesTable({ tableName, cases, HearingDetail , Evidence}) {
 
-            <tbody className="text-sm font-medium divide-y divide-slate-100 dark:divide-slate-700">
-              {cases
-                ? cases.map((singleCase) => {
+  if (cases) {
+    return (
+      <div className="col-span-full xl:col-span-12 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
+        <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
+          <h2 className="font-semibold text-slate-800 dark:text-slate-100">
+            {tableName}
+          </h2>
+        </header>
+        <div className="p-3">
+          {/* Table */}
+          <div className="overflow-x-auto">
+            <table className="table-auto w-full dark:text-slate-300">
+              {/* Table header */}
+              <thead className="text-xs uppercase text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-700 dark:bg-opacity-50 rounded-sm">
+                <tr>
+                  <th className="p-2">
+                    <div className="font-semibold text-left">Case Number</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Date File</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Case type</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Advocate</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">
+                      Attorney Advocate
+                    </div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Defendant</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Petitioner</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Judge</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Case Status</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Case Report</div>
+                  </th>
+                </tr>
+              </thead>
+              {/* Table body */}
+
+              <tbody className="text-sm font-medium divide-y divide-slate-100 dark:divide-slate-700">
+                {cases
+                  ? cases.map((singleCase) => {
                     return (
                       <tr key={singleCase.id}>
                         <td className="p-2">
@@ -102,7 +104,7 @@ function CasesTable({ tableName, cases }) {
                           </div>
                         </td>
                         <td className="p-2">
-                          <button className="flex justify-center text-center" style={{width:"100%"}} >
+                          <button className="flex justify-center text-center" style={{ width: "100%" }} >
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               width={20}
@@ -119,13 +121,132 @@ function CasesTable({ tableName, cases }) {
                       </tr>
                     );
                   })
-                : null}
-            </tbody>
-          </table>
+                  : null}
+              </tbody>
+            </table>
+          </div>
         </div>
       </div>
-    </div>
-  );
+    );
+  }
+  else if (HearingDetail) {
+    return (
+      <div className="col-span-full xl:col-span-12 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
+        <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
+          <h2 className="font-semibold text-slate-800 dark:text-slate-100">
+            {tableName}
+          </h2>
+        </header>
+        <div className="p-3">
+          {/* Table */}
+          <div className="overflow-x-auto">
+            <table className="table-auto w-full dark:text-slate-300">
+              {/* Table header */}
+              <thead className="text-xs uppercase text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-700 dark:bg-opacity-50 rounded-sm">
+                <tr>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Case Id</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Hearing date</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">HearingDetails</div>
+                  </th>
+                </tr>
+              </thead>
+              {/* Table body */}
+
+              <tbody className="text-sm font-medium divide-y divide-slate-100 dark:divide-slate-700">
+                {HearingDetail
+                  ? HearingDetail.map((HearingDetailsData) => {
+                    return (
+                      <tr key={HearingDetailsData.Id}>
+                        <td className="p-2">
+                          <div className="text-center">
+                            {HearingDetailsData.CaseId}
+                          </div>
+                        </td>
+                        <td className="p-2">
+                          <div className="text-center text-emerald-500">
+                            {HearingDetailsData.HearingDate}
+                          </div>
+                        </td>
+                        <td className="p-2">
+                          <div className="text-center">
+                            {HearingDetailsData.HearingDetails}
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })
+                  : null}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  else if (Evidence) {
+    return (
+      <div className="col-span-full xl:col-span-12 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
+        <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
+          <h2 className="font-semibold text-slate-800 dark:text-slate-100">
+            {tableName}
+          </h2>
+        </header>
+        <div className="p-3">
+          {/* Table */}
+          <div className="overflow-x-auto">
+            <table className="table-auto w-full dark:text-slate-300">
+              {/* Table header */}
+              <thead className="text-xs uppercase text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-700 dark:bg-opacity-50 rounded-sm">
+                <tr>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Case Id</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Evidence description</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Image</div>
+                  </th>
+                </tr>
+              </thead>
+              {/* Table body */}
+
+              <tbody className="text-sm font-medium divide-y divide-slate-100 dark:divide-slate-700">
+                {Evidence
+                  ? Evidence.map((Evidencedata) => {
+                    return (
+                      <tr key={Evidencedata.Id}>
+                        <td className="p-2">
+                          <div className="text-center">
+                            {Evidencedata.CaseId}
+                          </div>
+                        </td>
+                        <td className="p-2">
+                          <div className="text-center text-emerald-500">
+                            {Evidencedata.EvidenceDescription}
+                          </div>
+                        </td>
+                        <td className="p-2">
+                          <div className="text-center">
+                            Image is loading...
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })
+                  : null}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default CasesTable;

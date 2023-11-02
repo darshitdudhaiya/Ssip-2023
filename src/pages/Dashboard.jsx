@@ -23,10 +23,15 @@ import Banner from "../partials/Banner";
 import CasesCard from "../common/CasesCard";
 import CasesTable from "../common/CasesTable";
 import { cases } from "../constant";
+import Form from "../common/Form";
 
 function Dashboard({ currentScreen, setCurrentScreen }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
+  const [addCaseOpen, setAddCaseOpen] = useState(false);
 
+  const closeAddCaseModel = () => {
+    setAddCaseOpen(false);
+  }
   useEffect(() => {
     setCurrentScreen("Dashboard");
   }, []);
@@ -68,7 +73,7 @@ function Dashboard({ currentScreen, setCurrentScreen }) {
                 {/* Datepicker built with flatpickr */}
                 <Datepicker />
                 {/* Add view button */}
-                <button className="btn bg-indigo-500 hover:bg-indigo-600 text-white">
+                <button onClick={()=>{setAddCaseOpen(true)}} className="btn bg-indigo-500 hover:bg-indigo-600 text-white">
                   <svg
                     className="w-4 h-4 fill-current opacity-50 shrink-0"
                     viewBox="0 0 16 16"
@@ -170,7 +175,7 @@ function Dashboard({ currentScreen, setCurrentScreen }) {
             </div>
           </div>
         </main>
-
+        <Form addCaseOpen={addCaseOpen} closeAddCaseModel={closeAddCaseModel}/>
         {/* <Banner /> */}
       </div>
     </div>

@@ -120,3 +120,32 @@ export const cases = [
     caseStatus: "Pending",
   },
 ];
+
+export const HearingDetail = [
+  {
+    Id : 0 ,
+    CaseId: 54354,
+    HearingDate:"23 Oct 2023",
+    HearingDetails:"This is details of nothing...",
+  },
+  {
+    Id : 1 ,
+    CaseId: 54374,
+    HearingDate:"26 Oct 2023",
+    HearingDetails:"This is details of something...",
+  },
+]
+export const Evidence = [
+  {
+    Id:0,
+    CaseId:54374,
+    EvidenceDescription:"This is details of something ...",
+    Image:"user-36-08.jpg",
+  },
+  {
+    Id:1,
+    CaseId:51974,
+    EvidenceDescription:"This is details of something ...",
+    Image:"user-36-08.jpg",
+  }
+]
