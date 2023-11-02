@@ -1,41 +1,102 @@
 # SSIP-2023  -   Acknowledge System For The State Opinion In Criminal Matters
 
-![Mosaic TailwindCSS template preview](https://github.com/cruip/tailwind-dashboard-template/assets/2683512/d252e308-8869-4b70-bce8-bb44071f8b2e)
+![image](https://github.com/darshitdudhaiya/ssip-2023/assets/92248308/99a3d7ab-0a04-4691-9eba-c1460e5005ed)
 
-**Mosaic Lite** is a responsive dashboard template built on top of TailwindCSS and fully coded in React. It comes with several pre-coded charts (built with Chart.js 3) and widgets, and it's a great starting for anyone who wants to create a user interface for SaaS products, administrator dashboards, modern web apps, and more.
+![image](https://github.com/darshitdudhaiya/ssip-2023/assets/92248308/86f0ca8e-19da-4a80-9c9f-c68beec06f28)
 
-Use it for whatever you want, and be sure to reach us out on [Twitter](https://twitter.com/Cruip_com) if you build anything cool/useful with it.
 
-Created and maintained with ❤️ by [Cruip.com](https://cruip.com/).
+Introduction: 
+ In today's reality, this process faces several challenges, such as manual data 
+entry, inefficient communication, and the risk of data corruption.
+ To overcome these issues, there is a pressing need for a modernized system 
+that streamlines the process of collecting and acknowledging state opinions.
 
-## Live demo
 
-Check the live demo here 👉️ [https://mosaic.cruip.com/](https://mosaic.cruip.com/)
 
-## Mosaic Pro
+Problem:
+ Develop a secure and efficient system for timely communication of Legal 
+Department's opinions on filing Criminal Appeals in Gujarat High Court, 
+Supreme Court, and District Government Pleaders' decisions, ensuring 
+admin-exclusive access for user management and swift court decision 
+notifications.
+ There are solutions to manage the data of the criminal appeals, but it was 
+separated within High-court, Supreme-court and District-court individually
 
-[![Mosaic Pro](https://user-images.githubusercontent.com/2683512/151177026-3d063355-976d-4fdb-a5ed-9c1501c58af2.png)](https://cruip.com/mosaic/)
 
-## Design files
+Proposed System:
+ The proposed system will give the access to the High-court, Supreme-court 
+and District-court to the information about the criminals and their appeals in 
+court.
+ The data for criminal appeals is sourced from the respective courts and is 
+accessible to the specific court where a case is currently in progress, 
+enabling them to access information pertaining to a particular criminal case.
+ This system is a single solution to manage the data of the criminal appeals, 
+the work will be easier than the old paper work and lengthy system.
+ The Government can give circular or notice etc. to the institutions very 
+reliably. Institutions can give the feedback for the improvement of the system.
 
-If you need the design files, you can download them from Figma's Community 👉 https://bit.ly/3sigqHe
+Literature Review/Existing Innovation-technology to address related to problem
+Review: 
+ As we research E-Court Android Application and E-Court Website, systems 
+etc.
+ We found one of the E-Court Website. In this we found many bugs in it that 
+can be solved and this are been not really good for the user experience.
+ In this we are getting the required information about the criminal and their 
+appeals, but given information are individual between High-court, Supremecourt and District-court
 
-## Table of contents
+Approach:
+ We are trying to solve the problems of the government to solve the problem 
+of having the data of the criminal and information about their appeals in one 
+system.
+ This system will give you the access to the High-court, Supreme-court and 
+District-court to have the data of the criminals and information about their 
+appeals.
+ This system has a platform where the court will have to give the data of the 
+criminals and information about their appeals.
+ High-court, Supreme-court and District-court has an access to see the data 
+of any criminals and information about their appeals.
+ The government can announce and give the required information , circulars or 
+notice etc. to the institutions and the system has also and area were 
+institutions can give the suggestions about the drawbacks and loopholes of 
+the system or any education loophole or any required suggestions for the 
+education system.
 
-* [Usage](#usage)
-  * [Project setup](#project-setup)
-  * [Compiles and hot-reloads for development](#compiles-and-hot-reloads-for-development)
-  * [Compiles and minifies for production](#compiles-and-minifies-for-production)
-  * [Customize configuration](#customize-configuration)
-* [Support notes](#support-notes)            
-* [Credits](#credits)
-* [Terms and License](#terms-and-license)
-* [About Us](#about-us)
-* [Stay in the loop](#stay-in-the-loop)
+Technologies:
+ HTML
+ CSS
+ JQUERY
+ JAVASCRIPT
+ JSON
+ React JAVASCRIPT
+ MYSQL
+ ASP.NET Core
 
-## Usage
+Challenges:
+ The main challenge is to contact the legal person for the important details.
 
-This project was bootstrapped with [Vite](https://vitejs.dev/).
+
+Possible Outcomes:
+ Our project for the hackathon aims to create a web-based software that 
+effectively addresses the critical need for streamlined data management 
+across various courts.
+ Leveraging cutting-edge technologies such as React in the frontend and .NET 
+in the backend, our solution will provide an intuitive and user-friendly 
+interface, making it effortless for users to access detailed information on 
+criminal cases. By integrating features to filter data by date, court name, 
+advocate name, case number, and criminal name, we empower users to 
+retrieve the specific details they require swiftly and efficiently.
+ This innovative system will not only facilitate easy data access but also 
+enable the monitoring of criminal cases at different levels, benefiting 
+concerned Government officers and Government pleaders alike.
+ Furthermore, our solution will offer the flexibility to fetch data based on 
+various parameters like District, Case Details, Advocate, and Count, 
+enhancing the accessibility of critical information for informed decisionmaking.
+ Ultimately, this software will play a pivotal role in budget preparation for 
+expenses related to appeals for the cause of justice, ensuring transparency 
+and efficiency in the legal system.
+ The expected outcome of our project is the seamless and effective 
+management of criminal case data, benefiting all stakeholders involved.
+
 
 ### Project setup
 ```
@@ -54,27 +115,3 @@ npm run build
 
 #### Customize configuration
 See [Configuration Reference](https://vitejs.dev/guide/).
-
-### Support notes
-We are shipping our templates with a very basic React configuration to let you quickly get into the development process, but we don't discourage you from using any other configuration or framework built on the top of React. So, please note that any request dealing with React (e.g. extra features, customisations, et cetera) is to be considered out of the support scope.
-
-For more information about what support covers, please see our (FAQs)[https://cruip.com/faq/].
-
-## Credits
-
-- [Nucleo](https://nucleoapp.com/)
-
-## Terms and License
-
-- Released under the [GPL](https://www.gnu.org/licenses/gpl-3.0.html).
-- Copyright 2020 [Cruip](https://cruip.com/).
-- Use it for personal and commercial projects, but please don’t republish, redistribute, or resell the template.
-- Attribution is not required, although it is really appreciated.
-
-## About Us
-
-We're an Italian developer/designer duo creating high-quality design/code resources for developers, makers, and startups.
-
-## Stay in the loop
-
-If you would like to know when we release new resources, you can follow us on [Twitter](https://twitter.com/Cruip_com), or you can subscribe to our monthly [newsletter](https://cruip.com/#subscribe).
