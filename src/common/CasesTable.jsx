@@ -1,6 +1,6 @@
 import React from "react";
 
-function CasesTable({ tableName, cases, HearingDetail , Evidence}) {
+function CasesTable({ tableName, cases, HearingDetail, Evidence, courts ,advocates,acts}) {
 
   if (cases) {
     return (
@@ -246,6 +246,173 @@ function CasesTable({ tableName, cases, HearingDetail , Evidence}) {
         </div>
       </div>
     );
+  }
+  else if (courts) {
+    return (
+      <div className="col-span-full xl:col-span-12 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
+        <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
+          <h2 className="font-semibold text-slate-800 dark:text-slate-100">
+            {tableName}
+          </h2>
+        </header>
+        <div className="p-3">
+          {/* Table */}
+          <div className="overflow-x-auto">
+            <table className="table-auto w-full dark:text-slate-300">
+              {/* Table header */}
+              <thead className="text-xs uppercase text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-700 dark:bg-opacity-50 rounded-sm">
+                <tr>
+                  <th className="p-2">
+                    <div className="font-semibold text-left">Name</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">State</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">District</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Address</div>
+                  </th>
+                </tr>
+              </thead>
+              {/* Table body */}
+
+              <tbody className="text-sm font-medium divide-y divide-slate-100 dark:divide-slate-700">
+                {courts
+                  ? courts.map((singleCourt) => {
+                    return (
+                      <tr key={singleCourt.id}>
+                        <td className="p-2">
+                          <div className="flex items-center">
+                            <div className="text-slate-800 dark:text-slate-100">
+                              {singleCourt.courtName}
+                            </div>
+                          </div>
+                        </td>
+                        <td className="p-2">
+                          <div className="text-center">
+                            {singleCourt.courtState}
+                          </div>
+                        </td>
+                        <td className="p-2">
+                          <div className="text-center text-emerald-500">
+                            {singleCourt.courtDistrict}
+                          </div>
+                        </td>
+                        <td className="p-2">
+                          <div className="text-center">
+                            {singleCourt.courtAddress}
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })
+                  : null}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    );
+  }
+  else if (advocates) {
+    return (
+      <div className="col-span-full xl:col-span-12 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
+        <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
+          <h2 className="font-semibold text-slate-800 dark:text-slate-100">
+            {tableName}
+          </h2>
+        </header>
+        <div className="p-3">
+          {/* Table */}
+          <div className="overflow-x-auto">
+            <table className="table-auto w-full dark:text-slate-300">
+              {/* Table header */}
+              <thead className="text-xs uppercase text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-700 dark:bg-opacity-50 rounded-sm">
+                <tr>
+                  <th className="p-2">
+                    <div className="font-semibold text-left">Name</div>
+                  </th>
+                  <th className="p-2">
+                    <div className="font-semibold text-center">Enrollment Number</div>
+                  </th>
+                </tr>
+              </thead>
+              {/* Table body */}
+
+              <tbody className="text-sm font-medium divide-y divide-slate-100 dark:divide-slate-700">
+                {advocates
+                  ? advocates.map((singleAdvocate) => {
+                    return (
+                      <tr key={singleAdvocate.id}>
+                        <td className="p-2">
+                          <div className="flex items-center">
+                            <div className="text-slate-800 dark:text-slate-100">
+                              {singleAdvocate.name}
+                            </div>
+                          </div>
+                        </td>
+                        <td className="p-2">
+                          <div className="text-center">
+                            {singleAdvocate.enrollmentNumber}
+                          </div>
+                        </td>
+                      </tr>
+                    );
+                  })
+                  : null}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    )
+  }
+  else if(acts){
+    return (
+      <div className="col-span-full xl:col-span-12 bg-white dark:bg-slate-800 shadow-lg rounded-sm border border-slate-200 dark:border-slate-700">
+          <header className="px-5 py-4 border-b border-slate-100 dark:border-slate-700">
+              <h2 className="font-semibold text-slate-800 dark:text-slate-100">
+                  {tableName}
+              </h2>
+          </header>
+          <div className="p-3">
+              {/* Table */}
+              <div className="overflow-x-auto">
+                  <table className="table-auto w-full dark:text-slate-300">
+                      {/* Table header */}
+                      <thead className="text-xs uppercase text-slate-400 dark:text-slate-500 bg-slate-50 dark:bg-slate-700 dark:bg-opacity-50 rounded-sm">
+                          <tr>
+                              <th className="p-2">
+                                  <div className="font-semibold text-left">Name</div>
+                              </th>
+                          </tr>
+                      </thead>
+                      {/* Table body */}
+
+                      <tbody className="text-sm font-medium divide-y divide-slate-100 dark:divide-slate-700">
+                          {acts
+                              ? acts.map((singleAct) => {
+                                  return (
+                                      <tr key={singleAct.id}>
+                                          <td className="p-2">
+                                              <div className="flex items-center">
+                                                  <div className="text-slate-800 dark:text-slate-100">
+                                                      {singleAct.name}
+                                                  </div>
+                                              </div>
+                                          </td>
+                                      </tr>
+                                  );
+                              })
+                              : null}
+                      </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  )
   }
 }
 

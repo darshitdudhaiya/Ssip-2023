@@ -22,8 +22,8 @@ import DashboardCard13 from "../partials/dashboard/DashboardCard13";
 import Banner from "../partials/Banner";
 import CasesCard from "../common/CasesCard";
 import CasesTable from "../common/CasesTable";
-import { cases } from "../constant";
-import Form from "../common/Form";
+import { cases , advocates ,courts ,acts } from "../constant";
+import Addcase from "../Modals/Addcase";
 
 function Dashboard({ currentScreen, setCurrentScreen }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
@@ -175,7 +175,7 @@ function Dashboard({ currentScreen, setCurrentScreen }) {
             </div>
           </div>
         </main>
-        <Form addCaseOpen={addCaseOpen} closeAddCaseModel={closeAddCaseModel}/>
+        <Addcase addCaseOpen={addCaseOpen} closeAddCaseModel={closeAddCaseModel}/>
         {/* <Banner /> */}
       </div>
     </div>

@@ -149,3 +149,66 @@ export const Evidence = [
     Image:"user-36-08.jpg",
   }
 ]
+export const courts = [
+  {
+    id: 0,
+    courtName: "Jamnagar District Court",
+    courtState: "Gujarat",
+    courtDistrict: "Jamnagar",
+    courtAddress: "Cricket Bunglow Jamnagar"
+  },
+  {
+    id: 1,
+    courtName: "Jamnagar District Court",
+    courtState: "Gujarat",
+    courtDistrict: "Jamnagar",
+    courtAddress: "Cricket Bunglow Jamnagar"
+  },
+  {
+    id: 2,
+    courtName: "Jamnagar District Court",
+    courtState: "Gujarat",
+    courtDistrict: "Jamnagar",
+    courtAddress: "Cricket Bunglow Jamnagar"
+  },
+  {
+    id: 3,
+    courtName: "Jamnagar District Court",
+    courtState: "Gujarat",
+    courtDistrict: "Jamnagar",
+    courtAddress: "Cricket Bunglow Jamnagar"
+  },
+]
+
+export const advocates = [
+  {
+    id: 0,
+    name: "Sureshbhai",
+    enrollmentNumber: 65826895
+  },
+  {
+    id: 1,
+    name: "Sureshbhai",
+    enrollmentNumber: 65826895
+  },
+  {
+    id: 2,
+    name: "Sureshbhai",
+    enrollmentNumber: 65826895
+  }
+]
+
+export const acts = [
+  {
+    id: 0,
+    name: "302",
+  },
+  {
+    id: 1,
+    name: "302",
+  },
+  {
+    id: 2,
+    name: "302",
+  }
+]
